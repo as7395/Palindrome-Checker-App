@@ -1,20 +1,16 @@
 import java.util.*;
 public class PalindromeCheckerApp {
-
         public static boolean isPalindrome(String str) {
-            Queue<Character> queue = new LinkedList<>();
-            Stack<Character> stack = new Stack<>();
+            Deque<Character> deque = new ArrayDeque<>();
 
-            // Insert characters into both data structures
+            // Insert characters into deque
             for (int i = 0; i < str.length(); i++) {
-                char ch = str.charAt(i);
-                queue.add(ch);     // Enqueue (FIFO)
-                stack.push(ch);    // Push (LIFO)
+                deque.addLast(str.charAt(i));
             }
 
-            // Compare dequeue and pop
-            while (!queue.isEmpty()) {
-                if (queue.remove() != stack.pop()) {
+            // Compare front and rear
+            while (deque.size() > 1) {
+                if (deque.removeFirst() != deque.removeLast()) {
                     return false;
                 }
             }
@@ -37,4 +33,3 @@ public class PalindromeCheckerApp {
             sc.close();
         }
     }
-}
