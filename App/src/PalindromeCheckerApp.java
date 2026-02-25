@@ -1,6 +1,17 @@
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-        System.out.println("Welcome to Palindrome Checker App Management Systems");
-        System.out.println("Modify this logic to usecase 2");
+        String word = "madam";
+
+        String reversed = "";
+
+        for("int i = word.length() - 1;i>=0;i--"){
+            reversed = reversed + word.charAt(i);
+        }
+
+        if(word.equals(reversed)){
+            System.out.println(word + " is a Palindrome");
+        }else{
+            System.out.println(word + "is not a Palindrome");
+        }
     }
 }
