@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class PalindromeCheckerApp {
+    public static void main(String[] args){
+        System.out.println("Welcome to Palindrome Checker App Management Systems");
+        System.out.println("Version: @version 1.0");
 
         public static boolean isPalindrome(String str) {
             char[] arr = str.toCharArray();
