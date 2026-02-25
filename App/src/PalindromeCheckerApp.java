@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class PalindromeCheckerApp {
 
@@ -15,6 +16,7 @@ public class PalindromeCheckerApp {
             // Compare dequeue and pop
             while (!queue.isEmpty()) {
                 if (queue.remove() != stack.pop()) {
+
                     return false;
                 }
             }
@@ -37,4 +39,4 @@ public class PalindromeCheckerApp {
             sc.close();
         }
     }
-}
+
