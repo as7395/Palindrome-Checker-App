@@ -1,46 +1,42 @@
+import java.util.Stack;
 import java.util.Scanner;
 
+    public class PalindromeCheckerApp {
+=======
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-        System.out.println("Welcome to Palindrome Checker App Management Systems");
-        System.out.println("Version: @version 1.0");
 
         public static boolean isPalindrome(String str) {
-            char[] arr = str.toCharArray();
+            Stack<Character> stack = new Stack<>();
 
-            int left = 0;
-            int right = arr.length - 1;
+            // Push all characters into stack
+            for (int i = 0; i < str.length(); i++) {
+                stack.push(str.charAt(i));
+            }
 
-            while (left < right) {
-                if (arr[left] != arr[right]) {
+            // Pop and compare
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) != stack.pop()) {
                     return false;
                 }
-                left++;
-                right--;
             }
 
             return true;
         }
 
         public static void main(String[] args) {
-            String input = "madam";
-            System.out.println(isPalindrome(input));  // true
-        }
-    }
-    public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter a word: ");
-            String input = scanner.nextLine();
-            input = input.replaceAll("\\s+", "").toLowerCase();
-            String reversed = "";
-            for (int i = input.length() - 1; i >= 0; i--) {
-                reversed += input.charAt(i);
-            }
-            if (input.equals(reversed)) {
-                System.out.println("The input is a palindrome.");
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter a string: ");
+            String input = sc.nextLine();
+
+            if (isPalindrome(input)) {
+                System.out.println("Result: Palindrome ✅");
             } else {
-                System.out.println("The input is NOT a palindrome.");
+                System.out.println("Result: Not a Palindrome ❌");
             }
-            scanner.close();
+
+            sc.close();
         }
     }
+
