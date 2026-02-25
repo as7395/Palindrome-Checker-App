@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class PalindromeCheckerApp {
         public static boolean isPalindrome(String str) {
@@ -11,6 +12,7 @@ public class PalindromeCheckerApp {
             // Compare front and rear
             while (deque.size() > 1) {
                 if (deque.removeFirst() != deque.removeLast()) {
+        // Compare dequeue and po
                     return false;
                 }
             }
