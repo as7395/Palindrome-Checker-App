@@ -18,8 +18,8 @@ public class PalindromeCheckerApp {
             // Step 1: Find middle
             Node slow = head;
             Node fast = head;
-
-            while (fast != null && fast.next != null) {
+t.n
+            while (fast != null && fasext != null) {
                 slow = slow.next;
                 fast = fast.next.next;
             }
