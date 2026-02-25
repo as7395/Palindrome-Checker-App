@@ -1,7 +1,10 @@
 import java.util.Stack;
 import java.util.Scanner;
 
-    public class usecase5 {
+    public class PalindromeCheckerApp {
+=======
+public class PalindromeCheckerApp {
+    public static void main(String[] args){
 
         public static boolean isPalindrome(String str) {
             Stack<Character> stack = new Stack<>();
@@ -36,3 +39,4 @@ import java.util.Scanner;
             sc.close();
         }
     }
+
